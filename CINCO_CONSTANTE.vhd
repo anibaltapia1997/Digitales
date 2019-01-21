@@ -1,0 +1,14 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+ 
+entity CINCO_CONSTANTE is
+   port( 	CINCO: out std_logic_vector(7 DOWNTO 0));
+	
+end CINCO_CONSTANTE;
+ 
+architecture solve of CINCO_CONSTANTE is
+ begin
+	CINCO <="00000101";
+end solve;

@@ -1,0 +1,22 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity concatenar is
+
+port (
+     datoA : in std_logic_vector(7 downto 0);
+	 datoB : in std_logic_vector(7 downto 0);
+	 Salida : in std_logic_vector(7 downto 0)
+	 );
+end concatenar;
+
+architecture sol of concatenar is
+begin
+
+process(datoA,datoB)
+begin
+
+Salida <= datoB & datoA;
+
+end process;
+end sol;

@@ -1,0 +1,65 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity MSS is
+   port( 
+			START: in std_logic;
+			CLOCK: in std_logic;
+			Reset: in std_logic;
+			JUGAR: in std_logic;
+			CONSULTAR_PUNTAJES: in std_logic;
+			ARRIBA: IN std_logic;
+			ABAJO: IN std_logic;
+			IZQUIERDA: IN std_logic;
+			DERECHA: IN std_logic
+
+			
+			);
+end MSS;
+
+
+
+architecture COMPORTAMIENTO of MSS is
+
+--Señales
+	TYPE estado IS (Ta,Tb,Tc,Td,Te,Tf,Tg,Th,Ti,Tj,Tk,Tl,Tm);
+	SIGNAL y : estado;
+	
+begin
+	
+	 --Decodificador 
+ PROCESS (Reset,CLOCK)
+ 
+ begin
+ 
+	if Reset='0' then y<=Ta;
+	elsif (CLOCK'event and Clock='1') then 
+
+	end if;
+ 
+ 
+ END PROCESS;
+ 
+ 
+ --Decodificador de salida
+
+PROCESS (y)
+begin
+	
+
+
+
+ END PROCESS;
+------------------------ 
+
+
+END COMPORTAMIENTO;
+
+
+	
+	
+	
+	
+	
